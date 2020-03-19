@@ -1,0 +1,15 @@
+find to manage wifi password commonds :
+
+netsh wlan show profile ---show SSID
+
+netsh wlan export profile folder=C:\ key=clear  ---show wifi password
+
+change the windows password commonds :
+
+net user  ----show windows name
+
+net user 'windows name' 'password'   --- creating password
+
+net user 'windows name' *    -----deleting password
+
+
