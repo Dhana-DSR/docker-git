@@ -13,3 +13,4 @@ net user 'windows name' 'password'   --- creating password
 net user 'windows name' *    -----deleting password
 
 
+https://github.com/stackmerge/azuredevops-pipeline-demo
