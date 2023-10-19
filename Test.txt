@@ -14,3 +14,31 @@ net user 'windows name' *    -----deleting password
 
 
 https://github.com/stackmerge/azuredevops-pipeline-demo
+
+#!/bin/sh
+#Tomcat Shutdown script
+tomcat_path=/app/tomcat/tomcat_app
+echo "$( date +%Y-%m-%d:%H:%M:%S)::INFO::::Deployment Started on server `hostname -i` ....."
+TOMCAT_PID=`ps -ef | grep "$tomcat_path " | grep java | awk ' { print $2 } '`
+echo "$( date +%Y-%m-%d:%H:%M:%S) : Tomcat is Running with PID : $TOMCAT_PID"
+kill_try=1
+while [ $TOMCAT_PID ]
+do
+echo "$( date +%Y-%m-%d:%H:%M:%S): Stopping Tomcat : Attempt $kill_try..."
+kill -9 $TOMCAT_PID
+sleep 2
+TOMCAT1_PID=`ps -ef | grep "$tomcat_path " | grep java | awk ' { print $2 } '`
+if [[ ( ! $TOMCAT1_PID -eq 0) && ( $kill_try -lt 3 ) ]]
+then
+echo "$( date +%Y-%m-%d:%H:%M:%S): Failed trying again..."
+kill_try=`expr $kill_try + 1`
+elif [[ ( ! $TOMCAT1_PID -eq 0) && ( $kill_try == 3 ) ]]
+then
+echo "$( date +%Y-%m-%d:%H:%M:%S): Unable to down tomcat...Deployment failed"
+exit
+else
+#echo "$( date +%Y-%m-%d:%H:%M:%S): Tomcat is down..."
+break
+fi
+done
+echo "$( date +%Y-%m-%d:%H:%M:%S): Tomcat is down..."
