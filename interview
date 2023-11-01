@@ -8,3 +8,42 @@ Describe Jenkins security best practices, including authentication, authorizatio
 Reduce Docker  image size
 monitor ec2 instance performance and send an alert when the cpu usage reaches 70%
 cost optimization with s3 bukcets, ec2 instances, etc.
+
+
+Devops
+- how to configure variables, secets in pipelay (classic, yame)
+- Verable groups+ us pipelme variables, variable sets.
+- Inleghating Azure with Azuse Dereps
+- how to add agents fir build selectine agent fur each pipeline
+- pipelne wostflowt, exposting pipelne
+- ways to triggen pipelnes?
++, Schedule sigger.
+- Build fail issues examples, enor a soutin, timeont er
+-branching policies, hestercy accens to master
+-deployment groups? provision? sh
+- build validation.
+- Release poline configuration?
+- pedeployment condition, post deployment conditions)
+= net application build v deplay
+-pausing voriate fran stage lostye
+- approval Grates
+in delease pipeless
+- Roleback strategies in release pipeline
+- cI/cs pipelne to deploy vachs to production
+slos psllors of
+- how to migrate from Az Repos le Github
+Holiova
+13n97 98132
+grat
+- Agent pools?
+- how to entegrate Keyvents with azure denops pilne
+- Release parcess
+- Miceesoft hosted us self hasted qunnes
+why self sanes?
+- Release policies.
+- hero do you get steps in AzDev: in youl pipelne.
+-Seogets in pipelne?
+- Encrypting the values in pipelue
+-how to deploy nd applications.
+เมลิกๆกhor taeey
+- task groups?
