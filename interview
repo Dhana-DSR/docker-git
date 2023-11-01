@@ -1,0 +1,10 @@
+Branching Strategy
+What is a tagging strategy, and why is it important in version control?
+What are semantic versioning (semver) and how does it relate to tagging strategy?
+Walk through the steps to create a Jenkins pipeline that builds a Docker image, pushes it to a Docker registry, and deploys it to a Kubernetes cluster.
+How do you manage Docker image versioning and tagging within a Jenkins pipeline?
+Discuss strategies for scaling Jenkins to handle a large number of builds and jobs efficiently.
+Describe Jenkins security best practices, including authentication, authorization, and securing Jenkins plugins.
+Reduce Docker  image size
+monitor ec2 instance performance and send an alert when the cpu usage reaches 70%
+cost optimization with s3 bukcets, ec2 instances, etc.
