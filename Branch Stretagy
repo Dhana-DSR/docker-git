@@ -1,0 +1,17 @@
+I would like to share our GitHub branching strategy and policies to streamline our code development and deployment process. Here's a concise overview:
+ 
+Branching Structure
+Feature Branches: For individual tasks, bug fixes, or new features.
+Develop Branch: For testing combined changes from feature branches.
+Release Branch: For QA deployments.
+Master Branch: For production deployments.
+Workflow
+Feature Development: Create feature branches for tasks, commit and push changes.
+Integration and Testing: PR from feature to develop, collaborate, and test.
+QA Deployment: PR from develop to release, test thoroughly.
+Production Deployment: PR from release to master, deploy to production.
+Branch Policies
+No direct pushes to master and release branches.
+At least one reviewer approval is required for PRs into these branches.
+ 
+This strategy promotes code quality, testing, and collaboration.
