@@ -1,0 +1,17 @@
+To download build artifacts from a build pipeline to a target server directory, you typically use a deployment agent or a release management tool. Here's a general overview of how this process works:
+
+Build Artifact Generation: In your build pipeline, after the source code is compiled, tested, and packaged, build artifacts are generated. These artifacts could be compiled binaries, executable files, scripts, configuration files, or any other files required for your application to run.
+
+Artifact Publishing: Once the build artifacts are generated, they need to be published or stored in an accessible location. Common artifact repositories include Azure Artifacts, Azure Blob Storage, AWS S3, or a file share on the build server. The build pipeline configuration specifies where the artifacts are stored.
+
+Release Pipeline Configuration: In your release pipeline, you configure the deployment tasks. These tasks include specifying the source of the build artifacts (e.g., artifact repository, build server location) and the destination on the target server where the artifacts need to be copied.
+
+Agent Communication: Deployment agents installed on the target server establish a connection with the deployment server (which manages the release pipeline). The agents authenticate themselves and receive instructions about the deployment tasks, including downloading artifacts.
+
+Downloading Artifacts: The deployment agent on the target server downloads the build artifacts from the specified source. This can be a direct download from an artifact repository or a pull from a location on the build server. Agents use secure protocols and authentication mechanisms to ensure the integrity and security of the downloaded artifacts.
+
+Copying to Target Directory: Once the artifacts are downloaded, the deployment agent copies them to the designated directory on the target server. The target directory could be the application's installation folder or any other location where the application needs to reside.
+
+Post-Deployment Tasks: After the artifacts are copied to the target directory, deployment agents might perform additional tasks such as configuration file updates, database schema migrations, or service restarts to complete the deployment process.
+
+It's important to note that the exact steps and tools used for artifact downloading and deployment can vary based on the specific deployment tool, platform, and infrastructure you are using. Popular deployment tools like Azure DevOps, Jenkins, Octopus Deploy, and others have specific tasks or plugins to facilitate this process. Configuration settings in these tools define the source of artifacts and the target server directory, and deployment agents handle the execution of these tasks on the target server.
