@@ -1,0 +1,21 @@
+It seems like there might be a typo in your question, as "addition server" doesn't seem to be a common term in the context of Azure DevOps (ADO) or build pipelines. However, I'll provide information about using build agents in Azure DevOps, which might be what you're referring to.
+
+In Azure DevOps, a build pipeline is a set of processes and tools that automate the compilation and testing of your code. When you run a build pipeline, it requires an environment to execute the tasks defined in the pipeline. This environment is provided by build agents.
+
+Here are some reasons why you might want to use build agents in Azure DevOps:
+
+Parallel Execution: Build agents allow you to run multiple builds concurrently. This is useful when you have a large codebase or want to speed up the build process by dividing the work among multiple agents.
+
+Scalability: If your project grows or if you have multiple projects running simultaneously, having multiple build agents allows you to scale your build infrastructure to meet the demand.
+
+Isolation: Build agents provide an isolated environment for building and testing your code. This isolation helps prevent conflicts between builds and ensures that each build runs in a clean environment.
+
+Custom Environments: Build agents can be installed on machines with specific configurations, tools, or dependencies required for your builds. This allows you to create custom build environments tailored to your project's needs.
+
+Geographical Distribution: If your development team is distributed across different geographical locations, you can deploy build agents closer to the developers, reducing latency and improving build times.
+
+Resource Utilization: By distributing builds across multiple agents, you can make more efficient use of available resources, ensuring that your builds complete in a timely manner.
+
+Specialized Agents: For projects with unique requirements, you can set up specialized build agents with specific capabilities or hardware configurations.
+
+In summary, using build agents in Azure DevOps provides flexibility, scalability, and efficiency in managing your build infrastructure. It allows you to tailor the build environment to your project's needs and optimize the build process for speed and reliability.
